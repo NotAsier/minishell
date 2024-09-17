@@ -2,7 +2,6 @@
 # define MINISHELL_H
 
 /*__HEADER FILES__*/
-# include "minishell.h"
 # include "libs.h"
 
 /*__READLINE______*/
@@ -24,7 +23,7 @@
 # include "error_messages.h"
 
 /*__LIBFT_________*/
-# include "../libft/inc/libft.h"
+# include "../libft/libft.h"
 
 # define READ_END	0
 # define WRITE_END	1
