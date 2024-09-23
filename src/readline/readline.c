@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-int	read_exit(const char *command_buf)
+int	read_exit(char *command_buf)
 {
 	return (!ft_strcmp(command_buf, "exit")
 		|| !ft_strcmp(command_buf, "quit") || !ft_strcmp(command_buf, "e")

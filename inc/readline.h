@@ -3,6 +3,8 @@
 
 # include "minishell.h"
 
+# define PROMPT "\033[0;32m➜  \033[0;36mShell \033[1;33m✗ \033[0m"
+
 typedef struct s_expand {
 	int		i;
 	int		j;

@@ -6,7 +6,7 @@
 /*   By: aarranz- <aarranz-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 12:00:12 by andefern          #+#    #+#             */
-/*   Updated: 2024/09/17 13:18:56 by aarranz-         ###   ########.fr       */
+/*   Updated: 2024/09/23 12:34:34 by aarranz-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,15 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	**ft_split(char const *s, char c);
+void	ft_free_matrix(char **matrix);
+char	*ft_strndup(const char *s1, int len);
+int		ft_locate_str_in_matrix(char **matrix, char *str);
+char	**allocate_matrix(char **matrix, int delete, int *len);
+char	**ft_add_row_matrix(char **matrix, char *new_row);
+char	**ft_cpy_matrix(char **matrix);
+char	**ft_delete_row_matrix(char **matrix, int delete);
+int		ft_len_matrix(char **matrix);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
 // BONUS
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
