@@ -6,7 +6,7 @@
 #    By: aarranz- <aarranz-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/22 15:37:30 by andefern          #+#    #+#              #
-#    Updated: 2024/09/17 13:17:31 by aarranz-         ###   ########.fr        #
+#    Updated: 2024/09/23 12:48:31 by aarranz-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = libft.a
 
 # FLAGS DE COMPILACION #
 CC = gcc
-CFLAGS = #-Wall -Wextra -Werror #-g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror #-g3 -fsanitize=address
 AR = ar rc
 RM = /bin/rm -rf
 
@@ -38,12 +38,14 @@ SRCS =	ft_bzero.c \
 		ft_strrchr.c \
 		ft_strcmp.c  \
 		ft_strncmp.c \
+		ft_free_matrix.c \
 		ft_memchr.c \
 		ft_memcmp.c \
 		ft_strnstr.c \
 		ft_atoi.c \
 		ft_calloc.c \
 		ft_strdup.c \
+		ft_strndup.c \
 		ft_substr.c \
 		ft_strtrim.c \
 		ft_strjoin.c \
@@ -54,6 +56,12 @@ SRCS =	ft_bzero.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
+		ft_delete_row_matrix.c \
+		ft_locate_str_in_matrix.c \
+		ft_add_row_matrix.c \
+		ft_cpy_matrix.c \
+		ft_len_matrix.c \
+		ft_strncpy.c \
 		ft_split.c \
 		ft_lstnew_bonus.c \
 		ft_lstadd_front_bonus.c \
@@ -100,7 +108,7 @@ endef
 export LIBFT
 
 # REGLAS #
-.SILENT:
+#.SILENT:
 
 .c.o: $(SRCS)
 	$(CC) $(CFLAGS) -c $^ -o $@
@@ -109,7 +117,6 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
-
 
 clean:
 	$(RM) $(OBJS)

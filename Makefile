@@ -6,7 +6,7 @@
 #    By: aarranz- <aarranz-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/17 13:01:04 by aarranz-          #+#    #+#              #
-#    Updated: 2024/09/17 13:01:07 by aarranz-         ###   ########.fr        #
+#    Updated: 2024/09/23 12:24:39 by aarranz-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ EXECUTOR	:= cmd_type exec_cmd executor find_command
 READLINE 	:= copy_join expand_token malloc_expand_token malloc_expand_token_aux readline
 TOKENIZER 	:= store_tokens store_tokens_utils tokens_to_pipas utils
 MAIN	 	:= main
-UTILS 		:= environment errors
+UTILS 		:= enviroment errors
 
 
 
@@ -62,9 +62,6 @@ $(LIBFT):
 clean:
 	@rm -fr $(OBJ_DIR)
 	@make clean -C $(LIBFT_PATH)
-
-ascii:
-
 
 fclean:
 	@rm -fr $(OBJ_DIR)
